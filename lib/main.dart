@@ -55,8 +55,8 @@ class _MyAppState extends State<MyApp> {
     //         builder: (context, child, model) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'The Pocket Piano',
-      theme: ThemeData.dark(),
+      title: 'The Smart Piano',
+      theme: ThemeData.light(),
       home: HomeScreen(),
     );
     // }));
