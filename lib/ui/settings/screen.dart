@@ -19,7 +19,7 @@ class SettingsScreen extends StatelessWidget {
               title: Text('Bug Report'),
               subtitle: Text('File a new Issue'),
               onTap: () => launchUrl(
-                  'https://github.com/AppleEducate/flutter_piano/issues/new'),
+                  'https://github.com/Mosquito1123/SmartPiano/issues/new'),
             ),
             // ListTile(
             //   leading: Icon(Icons.palette),
@@ -57,60 +57,58 @@ class SettingsScreen extends StatelessWidget {
             // ),
             ListTile(
               leading: Icon(Icons.info),
-              title: Text('About'),
+              title: Text('AboutMe'),
               subtitle: Text('App Info and Credits'),
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => SettingsSubView(
-                          title: 'About',
+                          title: 'AboutMe',
                           children: <Widget>[
-                            ListTile(
-                              leading: Icon(Icons.web),
-                              title: Text('Website'),
-                              subtitle: Text('rodydavis.com'),
-                              onTap: () => launchUrl('https://rodydavis.com/'),
-                            ),
+//                            ListTile(
+//                              leading: Icon(Icons.web),
+//                              title: Text('Website'),
+//                              subtitle: Text('Mosquito1123'),
+//                              onTap: () => launchUrl('https://github.com/Mosquito1123'),
+//                            ),
                             ListTile(
                               leading: Icon(FontAwesomeIcons.twitter),
                               title: Text('Twitter'),
-                              subtitle: Text('@rodydavis'),
-                              onTap: () =>
-                                  launchUrl('https://twitter.com/rodydavis'),
+                              subtitle: Text('@Winston_Cheung_'),
+                              onTap: () => launchUrl(
+                                  'https://twitter.com/Winston_Cheung_'),
                             ),
                             ListTile(
                               leading: Icon(FontAwesomeIcons.github),
                               title: Text('GitHub'),
-                              subtitle: Text('@AppleEducate'),
+                              subtitle: Text('@Mosquito1123'),
                               onTap: () =>
-                                  launchUrl('https://github.com/appleeducate'),
+                                  launchUrl('https://github.com/Mosquito1123'),
                             ),
                             ListTile(
                               leading: Icon(FontAwesomeIcons.youtube),
                               title: Text('YouTube'),
-                              subtitle: Text('Rody Davis'),
+                              subtitle: Text('@Winston'),
                               onTap: () => launchUrl(
-                                  'https://www.youtube.com/channel/UCqc2elhr0N52GVsyNaWtLvA'),
+                                  'https://www.youtube.com/channel/UCNXevy1BalIc7gYwLPFxL2g?view_as=subscriber'),
                             ),
                             ListTile(
-                              leading: Icon(FontAwesomeIcons.instagram),
-                              title: Text('Instagram'),
-                              subtitle: Text('@rodydavisjr'),
-                              onTap: () => launchUrl(
-                                  'https://www.instagram.com/rodydavisjr/'),
+                              leading: Icon(FontAwesomeIcons.qq),
+                              title: Text('QQ'),
+                              subtitle: Text('@1020222363'),
+                              onTap: () => launchUrl('1020222363'),
                             ),
                             ListTile(
                               leading: Icon(FontAwesomeIcons.facebook),
                               title: Text('Facebook'),
-                              subtitle: Text('@rodydavis'),
+                              subtitle: Text('@winston.zhang.9889'),
                               onTap: () => launchUrl(
-                                  'https://www.facebook.com/rodydavis'),
+                                  'https://www.facebook.com/winston.zhang.9889'),
                             ),
                             ListTile(
-                              leading: Icon(FontAwesomeIcons.paintBrush),
-                              title: Text('Art Work'),
-                              subtitle: Text('by Jessie Davis'),
-                              onTap: () => launchUrl(
-                                  'https://rodydavis.com/jessiedavis.html'),
+                              leading: Icon(FontAwesomeIcons.telegram),
+                              title: Text('Telegram'),
+                              subtitle: Text('@Winston'),
+                              onTap: () => launchUrl('https://t.me/WinstonKim'),
                             ),
                           ],
                         )));

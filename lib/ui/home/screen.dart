@@ -150,7 +150,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       )),
       appBar: AppBar(
           title: Text(
-        "The Pocket Piano",
+        "The Smart Piano",
         style: TextStyle(
           fontWeight: FontWeight.w700,
           fontSize: 30.0,
