@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
       PackageInfo packageInfo = await PackageInfo.fromPlatform();
       httpArgs["uniqueId"] = packageInfo.packageName;
       httpArgs["buildVersionCode"] = packageInfo.buildNumber;
-      httpArgs["sourceCodeVersion"] = packageInfo.version;
+//      httpArgs["sourceCodeVersion"] = packageInfo.version;
       if (Platform.isIOS) {
         httpArgs["platform"] = "1";
         //ios相关代码
