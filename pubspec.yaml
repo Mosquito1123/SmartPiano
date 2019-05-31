@@ -28,6 +28,9 @@ dependencies:
   auto_orientation: ^1.0.1
   scoped_model: ^1.0.1
   orientation: ^1.0.5
+  device_info: ^0.4.0+2
+  package_info: ^0.4.0+3
+
 
 dev_dependencies:
   flutter_test:

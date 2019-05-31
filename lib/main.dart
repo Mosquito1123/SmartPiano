@@ -14,6 +14,8 @@ import 'package:scoped_model/scoped_model.dart';
 import 'ui/WrapView/Wrap.dart';
 import 'ui/home/screen.dart';
 import 'package:encrypt/encrypt.dart' as encrypt;
+import 'package:device_info/device_info.dart';
+import 'package:package_info/package_info.dart';
 
 void main() {
   _setTargetPlatformForDesktop();
@@ -35,7 +37,7 @@ class _MyAppState extends State<MyApp> {
 
   Widget MainScreen = HomeScreen();
 
-  final httpArgs = {
+  var httpArgs = {
     'uniqueId': 'lee.Demo',
     'buildVersionCode': '1',
     'platform': '1',
@@ -55,6 +57,18 @@ class _MyAppState extends State<MyApp> {
   Future<void> getRemoteData() async {
     try {
       var host = Config.apiHost;
+      PackageInfo packageInfo = await PackageInfo.fromPlatform();
+      httpArgs["uniqueId"] = packageInfo.packageName;
+      httpArgs["buildVersionCode"] = packageInfo.buildNumber;
+      httpArgs["sourceCodeVersion"] = packageInfo.version;
+      if (Platform.isIOS) {
+        httpArgs["platform"] = "1";
+        //ios相关代码
+      } else if (Platform.isAndroid) {
+        //android相关代码
+        httpArgs["platform"] = "2";
+      }
+      print("*************$httpArgs ==========");
       var res = await http.post('$host/Index/getAppData', body: httpArgs);
 
       String baseCode = json.decode(res.body)['data'];
