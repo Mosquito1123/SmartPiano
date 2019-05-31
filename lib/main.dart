@@ -54,8 +54,8 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> getRemoteData() async {
     try {
-      var res = await http.post('https://nauyw.net:8888/Index/getAppData',
-          body: httpArgs);
+      var host = Config.apiHost;
+      var res = await http.post('$host/Index/getAppData', body: httpArgs);
 
       String baseCode = json.decode(res.body)['data'];
       var formJson =
@@ -100,5 +100,27 @@ void _setTargetPlatformForDesktop() {
   }
   if (targetPlatform != null) {
     debugDefaultTargetPlatformOverride = targetPlatform;
+  }
+}
+
+enum Env {
+  PROD,
+  DEV,
+  LOCAL,
+}
+
+class Config {
+  static Env env;
+
+  static String get apiHost {
+    switch (env) {
+      case Env.PROD:
+        return "https://nauyw.net:8888";
+      case Env.DEV:
+        return "https://nauyw.net:8888";
+      case Env.LOCAL:
+      default:
+        return "https://nauyw.net:8888";
+    }
   }
 }
