@@ -1,11 +1,13 @@
 import 'dart:async';
-
+import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_midi/flutter_midi.dart';
 import 'package:localstorage/localstorage.dart';
 import 'package:vibrate/vibrate.dart';
-
+import 'package:orientation/orientation.dart';
+import '../WrapView/web_view_scene.dart';
 import '../../utils/index.dart';
 import '../common/piano_view.dart';
 import '../settings/screen.dart';
@@ -22,6 +24,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
   @override
   initState() {
+    OrientationPlugin.forceOrientation(DeviceOrientation.landscapeLeft);
+
     _loadSoundFont();
     Future.delayed(Duration(seconds: 60)).then((_) => requestReview());
     super.initState();
@@ -29,6 +33,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
   @override
   void dispose() {
+    OrientationPlugin.forceOrientation(DeviceOrientation.portraitUp);
+
     _isDisposed = true;
     super.dispose();
   }
@@ -149,13 +155,28 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         ]),
       )),
       appBar: AppBar(
+          actions: <Widget>[
+            IconButton(
+                icon: Icon(Icons.notification_important),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                        builder: (BuildContext context) => WebViewScene(
+                              url:
+                                  'https://raw.githubusercontent.com/Mosquito1123/SmartPiano/master/LICENSE',
+                              title: 'LICENSE',
+                            ),
+                      ));
+                }),
+          ],
           title: Text(
-        "The Smart Piano",
-        style: TextStyle(
-          fontWeight: FontWeight.w700,
-          fontSize: 30.0,
-        ),
-      )),
+            "The Smart Piano",
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              fontSize: 30.0,
+            ),
+          )),
       body: _buildKeys(context),
     );
   }

@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'package:flutter/services.dart';
 
 class WrapScreen extends StatefulWidget {
   final url;
@@ -24,6 +25,7 @@ class _WrapState extends State<WrapScreen> {
   @override
   void initState() {
     // TODO: implement initState
+
     super.initState();
   }
 
@@ -32,7 +34,15 @@ class _WrapState extends State<WrapScreen> {
     print('++++++++wrap$_url');
     // TODO: implement build
     return new WebviewScaffold(
+      supportMultipleWindows: true,
       url: _url,
     );
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+
+    super.dispose();
   }
 }

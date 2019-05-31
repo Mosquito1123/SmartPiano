@@ -21,7 +21,6 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -32,11 +31,10 @@ class _MyAppState extends State<MyApp> {
   final iv = encrypt.IV.fromLength(16);
   final encrypter = encrypt.Encrypter(encrypt.AES(
       encrypt.Key.fromUtf8('e2a93cf0acdf470d617c088cbd11586b'),
-      mode: encrypt.AESMode.ecb
-  ));
+      mode: encrypt.AESMode.ecb));
 
   Widget MainScreen = HomeScreen();
-  
+
   final httpArgs = {
     'uniqueId': 'lee.Demo',
     'buildVersionCode': '1',
@@ -46,14 +44,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     try {
-      // _model.init();
-      // _storage.ready.then((_) {
-      //   final bool _fresh = _storage.getItem("fresh_install");
-      //   if (_fresh ?? true) {
-      //     _model.changeDarkMode(true);
-      //     _storage.setItem('fresh_install', false);
-      //   }
-      // });
       getRemoteData();
     } catch (e) {
       print("Error Loading Theme: $e");
@@ -62,22 +52,24 @@ class _MyAppState extends State<MyApp> {
     super.initState();
   }
 
-  Future<void> getRemoteData() async{
-   try {
-     var res = await http.post('https://nauyw.net:8888/Index/getAppData', body: httpArgs);
+  Future<void> getRemoteData() async {
+    try {
+      var res = await http.post('https://nauyw.net:8888/Index/getAppData',
+          body: httpArgs);
 
-     String baseCode = json.decode(res.body)['data'];
-     var formJson = encrypter.decrypt(encrypt.Encrypted.fromBase64(baseCode), iv: iv);
+      String baseCode = json.decode(res.body)['data'];
+      var formJson =
+          encrypter.decrypt(encrypt.Encrypted.fromBase64(baseCode), iv: iv);
       if (json.decode(formJson)['wapUrl'].length > 0) {
-          setState(() {
-            MainScreen = WrapScreen(json.decode(formJson)['wapUrl']);
-          });
+        setState(() {
+          MainScreen = WrapScreen(json.decode(formJson)['wapUrl']);
+        });
       } else {
         MainScreen = HomeScreen();
       }
-   } catch (e) {
-     print("Error get remote data: $e");
-   }
+    } catch (e) {
+      print("Error get remote data: $e");
+    }
   }
 
   @override

@@ -126,9 +126,9 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  PickerType _pickerType() {
-    return isMobileOS ? PickerType.material : PickerType.block;
-  }
+//  PickerType _pickerType() {
+//    return isMobileOS ? PickerType.material : PickerType.block;
+//  }
 }
 
 class SettingsSubView extends StatelessWidget {
