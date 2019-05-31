@@ -27,7 +27,7 @@ DEPENDENCIES:
   - app_review (from `.symlinks/plugins/app_review/ios`)
   - auto_orientation (from `.symlinks/plugins/auto_orientation/ios`)
   - device_info (from `.symlinks/plugins/device_info/ios`)
-  - Flutter (from `.symlinks/flutter/ios-release`)
+  - Flutter (from `.symlinks/flutter/ios`)
   - flutter_midi (from `.symlinks/plugins/flutter_midi/ios`)
   - flutter_webview_plugin (from `.symlinks/plugins/flutter_webview_plugin/ios`)
   - orientation (from `.symlinks/plugins/orientation/ios`)
@@ -45,7 +45,7 @@ EXTERNAL SOURCES:
   device_info:
     :path: ".symlinks/plugins/device_info/ios"
   Flutter:
-    :path: ".symlinks/flutter/ios-release"
+    :path: ".symlinks/flutter/ios"
   flutter_midi:
     :path: ".symlinks/plugins/flutter_midi/ios"
   flutter_webview_plugin:
