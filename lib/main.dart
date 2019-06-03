@@ -16,6 +16,8 @@ import 'ui/home/screen.dart';
 import 'package:encrypt/encrypt.dart' as encrypt;
 import 'package:device_info/device_info.dart';
 import 'package:package_info/package_info.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import './generated/i18n.dart';
 
 void main() {
   _setTargetPlatformForDesktop();
@@ -28,6 +30,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  Locale _locale = const Locale('en', '');
+
   // final ThemeModel _model = ThemeModel(customLightTheme: ThemeData.dark());
   // final LocalStorage _storage = new LocalStorage('app_settings');
   final iv = encrypt.IV.fromLength(16);
@@ -93,10 +97,24 @@ class _MyAppState extends State<MyApp> {
     //     child: new ScopedModelDescendant<ThemeModel>(
     //         builder: (context, child, model) {
     return MaterialApp(
+      localizationsDelegates: const [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate
+      ],
+      supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
-      title: 'The Smart Piano',
+      title: S.of(context).appTitle,
       theme: ThemeData.light(),
-      home: MainScreen,
+      home: Builder(
+        builder: (BuildContext context) {
+          return Localizations.override(
+            context: context,
+            locale: _locale,
+            child: MainScreen,
+          );
+        },
+      ),
     );
     // }));
   }

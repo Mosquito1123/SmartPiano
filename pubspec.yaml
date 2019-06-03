@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
   tonic: ^0.2.3
   cupertino_icons: ^0.1.2
   vibrate: ^0.0.4

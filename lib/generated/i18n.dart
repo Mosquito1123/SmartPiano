@@ -18,10 +18,323 @@ class S implements WidgetsLocalizations {
 
   @override
   TextDirection get textDirection => TextDirection.ltr;
+
+  String get about => "About Me";
+  String get appInfoAndCredits => "App Info And Credits";
+  String get appTitle => "The Smart Piano";
+  String get bugReport => "Bug Report";
+  String get changeWidth => "Change Width";
+  String get disabledScroll => "Disable Scroll";
+  String get feedback => "Key Feedback";
+  String get issue => "Find a new issue";
+  String get onlyForOctaves => "Only For Octaves";
+  String get settings => "Settings";
+  String get showLabels => "Show Labels";
+}
+
+class $ms_MY extends S {
+  const $ms_MY();
+
+  @override
+  TextDirection get textDirection => TextDirection.ltr;
+
+  @override
+  String get feedback => "Maklumbalas Utama";
+  @override
+  String get settings => "Tetapan";
+  @override
+  String get onlyForOctaves => "Hanya Untuk Octaves";
+  @override
+  String get issue => "Dapatkan isu baru";
+  @override
+  String get showLabels => "Tunjukkan Label";
+  @override
+  String get appInfoAndCredits => "Maklumat App Dan Kredit";
+  @override
+  String get bugReport => "Laporan Bug";
+  @override
+  String get about => "Tentang Saya";
+  @override
+  String get changeWidth => "CTukar Lebar";
+  @override
+  String get disabledScroll => "Lumpuhkan Tatal";
+  @override
+  String get appTitle => "Piano Pintar";
+}
+
+class $el_GR extends S {
+  const $el_GR();
+
+  @override
+  TextDirection get textDirection => TextDirection.ltr;
+
+  @override
+  String get feedback => "Βασικά σχόλια";
+  @override
+  String get settings => "Ρυθμίσεις";
+  @override
+  String get onlyForOctaves => "Μόνο για Οκτάβες";
+  @override
+  String get issue => "Βρείτε ένα νέο ζήτημα";
+  @override
+  String get showLabels => "Εμφάνιση ετικετών";
+  @override
+  String get appInfoAndCredits => "Πληροφορίες εφαρμογής και πιστώσεις";
+  @override
+  String get bugReport => "Έκθεση σφαλμάτων";
+  @override
+  String get about => "Σχετικά με μένα";
+  @override
+  String get changeWidth => "Αλλαγή πλάτους";
+  @override
+  String get disabledScroll => "Απενεργοποίηση κύλισης";
+  @override
+  String get appTitle => "Το έξυπνο πιάνο";
+}
+
+class $ru_RU extends S {
+  const $ru_RU();
+
+  @override
+  TextDirection get textDirection => TextDirection.ltr;
+
+  @override
+  String get feedback => "Ключевая обратная связь";
+  @override
+  String get settings => "настройки";
+  @override
+  String get onlyForOctaves => "Только для октав";
+  @override
+  String get issue => "Найти новую проблему";
+  @override
+  String get showLabels => "SПоказать ярлыки";
+  @override
+  String get appInfoAndCredits => "Информация о приложении и кредиты";
+  @override
+  String get bugReport => "Сообщение об ошибке";
+  @override
+  String get about => "Обо мне";
+  @override
+  String get changeWidth => "Изменить ширину";
+  @override
+  String get disabledScroll => "Отключить свиток";
+  @override
+  String get appTitle => "Умное Фортепиано";
+}
+
+class $en_GB extends S {
+  const $en_GB();
+
+  @override
+  TextDirection get textDirection => TextDirection.ltr;
+
+  @override
+  String get feedback => "Key Feedback";
+  @override
+  String get settings => "Settings";
+  @override
+  String get onlyForOctaves => "Only For Octaves";
+  @override
+  String get issue => "Find a new issue";
+  @override
+  String get showLabels => "Show Labels";
+  @override
+  String get appInfoAndCredits => "App Info And Credits";
+  @override
+  String get bugReport => "Bug Report";
+  @override
+  String get about => "About Me";
+  @override
+  String get changeWidth => "Change Width";
+  @override
+  String get disabledScroll => "Disable Scroll";
+  @override
+  String get appTitle => "The Smart Piano";
+}
+
+class $ko_KR extends S {
+  const $ko_KR();
+
+  @override
+  TextDirection get textDirection => TextDirection.ltr;
+
+  @override
+  String get feedback => "주요 피드백";
+  @override
+  String get settings => "설정";
+  @override
+  String get onlyForOctaves => "옥타브 전용";
+  @override
+  String get issue => "새로운 문제 찾기";
+  @override
+  String get showLabels => "라벨 표시";
+  @override
+  String get appInfoAndCredits => "앱 정보 및 크레딧";
+  @override
+  String get bugReport => "버그 리포트";
+  @override
+  String get about => "나에 대해서";
+  @override
+  String get changeWidth => "너비 변경";
+  @override
+  String get disabledScroll => "스크롤 사용 중지";
+  @override
+  String get appTitle => "스마트 피아노";
+}
+
+class $en_US extends S {
+  const $en_US();
+
+  @override
+  TextDirection get textDirection => TextDirection.ltr;
+
+  @override
+  String get feedback => "Key Feedback";
+  @override
+  String get settings => "Settings";
+  @override
+  String get onlyForOctaves => "Only For Octaves";
+  @override
+  String get issue => "Find a new issue";
+  @override
+  String get showLabels => "Show Labels";
+  @override
+  String get appInfoAndCredits => "App Info And Credits";
+  @override
+  String get bugReport => "Bug Report";
+  @override
+  String get about => "About Me";
+  @override
+  String get changeWidth => "Change Width";
+  @override
+  String get disabledScroll => "Disable Scroll";
+  @override
+  String get appTitle => "The Smart Piano";
 }
 
 class $en extends S {
   const $en();
+}
+
+class $zh_CN extends S {
+  const $zh_CN();
+
+  @override
+  TextDirection get textDirection => TextDirection.ltr;
+
+  @override
+  String get feedback => "键反馈";
+  @override
+  String get settings => "设置";
+  @override
+  String get onlyForOctaves => "仅适用于八度音阶";
+  @override
+  String get issue => "发现新问题";
+  @override
+  String get showLabels => "显示标签";
+  @override
+  String get appInfoAndCredits => "应用信息";
+  @override
+  String get bugReport => "Bug报告";
+  @override
+  String get about => "关于我";
+  @override
+  String get changeWidth => "改变键宽度";
+  @override
+  String get disabledScroll => "禁用滚动";
+  @override
+  String get appTitle => "手机钢琴";
+}
+
+class $fr_FR extends S {
+  const $fr_FR();
+
+  @override
+  TextDirection get textDirection => TextDirection.ltr;
+
+  @override
+  String get feedback => "Commentaires clés";
+  @override
+  String get settings => "Réglages";
+  @override
+  String get onlyForOctaves => "Seulement pour les octaves";
+  @override
+  String get issue => "Trouver un nouveau numéro";
+  @override
+  String get showLabels => "Afficher les étiquettes";
+  @override
+  String get appInfoAndCredits =>
+      "Informations sur les applications et crédits";
+  @override
+  String get bugReport => "Rapport d'erreur";
+  @override
+  String get about => "À propos de moi";
+  @override
+  String get changeWidth => "Changer la largeur";
+  @override
+  String get disabledScroll => "Désactiver le défilement";
+  @override
+  String get appTitle => "Le piano intelligent";
+}
+
+class $ja_JP extends S {
+  const $ja_JP();
+
+  @override
+  TextDirection get textDirection => TextDirection.ltr;
+
+  @override
+  String get feedback => "主なフィードバック";
+  @override
+  String get settings => "設定";
+  @override
+  String get onlyForOctaves => "オクターブのみ";
+  @override
+  String get issue => "新しい問題";
+  @override
+  String get showLabels => "ラベルを表示";
+  @override
+  String get appInfoAndCredits => "アプリ情報とクレジット";
+  @override
+  String get bugReport => "バグレポート";
+  @override
+  String get about => "私について";
+  @override
+  String get changeWidth => "幅を変更";
+  @override
+  String get disabledScroll => "スクロールを無効にする";
+  @override
+  String get appTitle => "スマートピアノ";
+}
+
+class $de_DE extends S {
+  const $de_DE();
+
+  @override
+  TextDirection get textDirection => TextDirection.ltr;
+
+  @override
+  String get feedback => "Key Feedback";
+  @override
+  String get settings => "die Einstellungen";
+  @override
+  String get onlyForOctaves => "Nur für Oktaven";
+  @override
+  String get issue => "Finden Sie eine neue Ausgabe";
+  @override
+  String get showLabels => "Labels anzeigen";
+  @override
+  String get appInfoAndCredits => "App-Infos und Credits";
+  @override
+  String get bugReport => "Fehlerbericht";
+  @override
+  String get about => "Über mich";
+  @override
+  String get changeWidth => "Breite ändern";
+  @override
+  String get disabledScroll => "Scroll deaktivieren";
+  @override
+  String get appTitle => "Das kluge Klavier";
 }
 
 class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
@@ -29,7 +342,17 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
 
   List<Locale> get supportedLocales {
     return const <Locale>[
+      Locale("ms", "MY"),
+      Locale("el", "GR"),
+      Locale("ru", "RU"),
+      Locale("en", "GB"),
+      Locale("ko", "KR"),
+      Locale("en", "US"),
       Locale("en", ""),
+      Locale("zh", "CN"),
+      Locale("fr", "FR"),
+      Locale("ja", "JP"),
+      Locale("de", "DE"),
     ];
   }
 
@@ -70,8 +393,28 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
     final String lang = getLang(locale);
     if (lang != null) {
       switch (lang) {
+        case "ms_MY":
+          return SynchronousFuture<S>(const $ms_MY());
+        case "el_GR":
+          return SynchronousFuture<S>(const $el_GR());
+        case "ru_RU":
+          return SynchronousFuture<S>(const $ru_RU());
+        case "en_GB":
+          return SynchronousFuture<S>(const $en_GB());
+        case "ko_KR":
+          return SynchronousFuture<S>(const $ko_KR());
+        case "en_US":
+          return SynchronousFuture<S>(const $en_US());
         case "en":
           return SynchronousFuture<S>(const $en());
+        case "zh_CN":
+          return SynchronousFuture<S>(const $zh_CN());
+        case "fr_FR":
+          return SynchronousFuture<S>(const $fr_FR());
+        case "ja_JP":
+          return SynchronousFuture<S>(const $ja_JP());
+        case "de_DE":
+          return SynchronousFuture<S>(const $de_DE());
         default:
         // NO-OP.
       }

@@ -3,21 +3,22 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:persist_theme/persist_theme.dart';
 
 import '../../utils/index.dart';
+import '../../generated/i18n.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('General'),
+        title: Text(S.of(context).settings),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             ListTile(
               leading: Icon(Icons.bug_report),
-              title: Text('Bug Report'),
-              subtitle: Text('File a new Issue'),
+              title: Text(S.of(context).bugReport),
+              subtitle: Text(S.of(context).issue),
               onTap: () => launchUrl(
                   'https://github.com/Mosquito1123/SmartPiano/issues/new'),
             ),
@@ -57,12 +58,12 @@ class SettingsScreen extends StatelessWidget {
             // ),
             ListTile(
               leading: Icon(Icons.info),
-              title: Text('AboutMe'),
-              subtitle: Text('App Info and Credits'),
+              title: Text(S.of(context).about),
+              subtitle: Text(S.of(context).appInfoAndCredits),
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => SettingsSubView(
-                          title: 'AboutMe',
+                          title: S.of(context).about,
                           children: <Widget>[
 //                            ListTile(
 //                              leading: Icon(Icons.web),
@@ -142,7 +143,7 @@ class SettingsSubView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(S.of(context).settings),
       ),
       body: SingleChildScrollView(
         child: Column(children: children),
