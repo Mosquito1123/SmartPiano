@@ -3,22 +3,23 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:persist_theme/persist_theme.dart';
 
 import '../../utils/index.dart';
-import '../../generated/i18n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).settings),
+        title: Text(AppLocalizations.of(context).tr("settings")),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             ListTile(
               leading: Icon(Icons.bug_report),
-              title: Text(S.of(context).bugReport),
-              subtitle: Text(S.of(context).issue),
+              title: Text(AppLocalizations.of(context).tr("bug_report")),
+              subtitle: Text(AppLocalizations.of(context).tr("issue")),
               onTap: () => launchUrl(
                   'https://github.com/Mosquito1123/SmartPiano/issues/new'),
             ),
@@ -58,12 +59,13 @@ class SettingsScreen extends StatelessWidget {
             // ),
             ListTile(
               leading: Icon(Icons.info),
-              title: Text(S.of(context).about),
-              subtitle: Text(S.of(context).appInfoAndCredits),
+              title: Text(AppLocalizations.of(context).tr("about")),
+              subtitle:
+                  Text(AppLocalizations.of(context).tr("app_info_and_credits")),
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => SettingsSubView(
-                          title: S.of(context).about,
+                          title: AppLocalizations.of(context).tr("about"),
                           children: <Widget>[
 //                            ListTile(
 //                              leading: Icon(Icons.web),
@@ -143,7 +145,7 @@ class SettingsSubView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).settings),
+        title: Text(AppLocalizations.of(context).tr("settings")),
       ),
       body: SingleChildScrollView(
         child: Column(children: children),

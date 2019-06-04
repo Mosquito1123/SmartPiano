@@ -1,13 +1,13 @@
 {
-  "appTitle":"The Smart Piano",
-  "bugReport":"Bug Report",
+  "app_title":"The Smart Piano",
+  "bug_report":"Bug Report",
   "settings":"Settings",
   "issue":"Find a new issue",
   "about":"About Me",
-  "appInfoAndCredits":"App Info And Credits",
-  "changeWidth":"Change Width",
-  "showLabels":"Show Labels",
-  "onlyForOctaves":"Only For Octaves",
-  "disabledScroll":"Disable Scroll",
+  "app_info_and_credits":"App Info And Credits",
+  "change_width":"Change Width",
+  "show_labels":"Show Labels",
+  "only_for_octaves":"Only For Octaves",
+  "disabled_scroll":"Disable Scroll",
   "feedback":"Key Feedback"
 }

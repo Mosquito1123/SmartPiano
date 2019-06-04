@@ -20,16 +20,16 @@ class S implements WidgetsLocalizations {
   TextDirection get textDirection => TextDirection.ltr;
 
   String get about => "About Me";
-  String get appInfoAndCredits => "App Info And Credits";
-  String get appTitle => "The Smart Piano";
-  String get bugReport => "Bug Report";
-  String get changeWidth => "Change Width";
-  String get disabledScroll => "Disable Scroll";
+  String get app_info_and_credits => "App Info And Credits";
+  String get app_title => "The Smart Piano";
+  String get bug_report => "Bug Report";
+  String get change_width => "Change Width";
+  String get disabled_scroll => "Disable Scroll";
   String get feedback => "Key Feedback";
   String get issue => "Find a new issue";
-  String get onlyForOctaves => "Only For Octaves";
+  String get only_for_octaves => "Only For Octaves";
   String get settings => "Settings";
-  String get showLabels => "Show Labels";
+  String get show_labels => "Show Labels";
 }
 
 class $ms_MY extends S {
@@ -43,23 +43,23 @@ class $ms_MY extends S {
   @override
   String get settings => "Tetapan";
   @override
-  String get onlyForOctaves => "Hanya Untuk Octaves";
-  @override
   String get issue => "Dapatkan isu baru";
   @override
-  String get showLabels => "Tunjukkan Label";
+  String get app_title => "Piano Pintar";
   @override
-  String get appInfoAndCredits => "Maklumat App Dan Kredit";
+  String get bug_report => "Laporan Bug";
   @override
-  String get bugReport => "Laporan Bug";
+  String get change_width => "CTukar Lebar";
   @override
   String get about => "Tentang Saya";
   @override
-  String get changeWidth => "CTukar Lebar";
+  String get show_labels => "Tunjukkan Label";
   @override
-  String get disabledScroll => "Lumpuhkan Tatal";
+  String get only_for_octaves => "Hanya Untuk Octaves";
   @override
-  String get appTitle => "Piano Pintar";
+  String get disabled_scroll => "Lumpuhkan Tatal";
+  @override
+  String get app_info_and_credits => "Maklumat App Dan Kredit";
 }
 
 class $el_GR extends S {
@@ -73,23 +73,23 @@ class $el_GR extends S {
   @override
   String get settings => "Ρυθμίσεις";
   @override
-  String get onlyForOctaves => "Μόνο για Οκτάβες";
-  @override
   String get issue => "Βρείτε ένα νέο ζήτημα";
   @override
-  String get showLabels => "Εμφάνιση ετικετών";
+  String get app_title => "Το έξυπνο πιάνο";
   @override
-  String get appInfoAndCredits => "Πληροφορίες εφαρμογής και πιστώσεις";
+  String get bug_report => "Έκθεση σφαλμάτων";
   @override
-  String get bugReport => "Έκθεση σφαλμάτων";
+  String get change_width => "Αλλαγή πλάτους";
   @override
   String get about => "Σχετικά με μένα";
   @override
-  String get changeWidth => "Αλλαγή πλάτους";
+  String get show_labels => "Εμφάνιση ετικετών";
   @override
-  String get disabledScroll => "Απενεργοποίηση κύλισης";
+  String get only_for_octaves => "Μόνο για Οκτάβες";
   @override
-  String get appTitle => "Το έξυπνο πιάνο";
+  String get disabled_scroll => "Απενεργοποίηση κύλισης";
+  @override
+  String get app_info_and_credits => "Πληροφορίες εφαρμογής και πιστώσεις";
 }
 
 class $ru_RU extends S {
@@ -103,23 +103,23 @@ class $ru_RU extends S {
   @override
   String get settings => "настройки";
   @override
-  String get onlyForOctaves => "Только для октав";
-  @override
   String get issue => "Найти новую проблему";
   @override
-  String get showLabels => "SПоказать ярлыки";
+  String get app_title => "Умное Фортепиано";
   @override
-  String get appInfoAndCredits => "Информация о приложении и кредиты";
+  String get bug_report => "Сообщение об ошибке";
   @override
-  String get bugReport => "Сообщение об ошибке";
+  String get change_width => "Изменить ширину";
   @override
   String get about => "Обо мне";
   @override
-  String get changeWidth => "Изменить ширину";
+  String get show_labels => "SПоказать ярлыки";
   @override
-  String get disabledScroll => "Отключить свиток";
+  String get only_for_octaves => "Только для октав";
   @override
-  String get appTitle => "Умное Фортепиано";
+  String get disabled_scroll => "Отключить свиток";
+  @override
+  String get app_info_and_credits => "Информация о приложении и кредиты";
 }
 
 class $en_GB extends S {
@@ -133,23 +133,23 @@ class $en_GB extends S {
   @override
   String get settings => "Settings";
   @override
-  String get onlyForOctaves => "Only For Octaves";
-  @override
   String get issue => "Find a new issue";
   @override
-  String get showLabels => "Show Labels";
+  String get app_title => "The Smart Piano";
   @override
-  String get appInfoAndCredits => "App Info And Credits";
+  String get bug_report => "Bug Report";
   @override
-  String get bugReport => "Bug Report";
+  String get change_width => "Change Width";
   @override
   String get about => "About Me";
   @override
-  String get changeWidth => "Change Width";
+  String get show_labels => "Show Labels";
   @override
-  String get disabledScroll => "Disable Scroll";
+  String get only_for_octaves => "Only For Octaves";
   @override
-  String get appTitle => "The Smart Piano";
+  String get disabled_scroll => "Disable Scroll";
+  @override
+  String get app_info_and_credits => "App Info And Credits";
 }
 
 class $ko_KR extends S {
@@ -163,23 +163,23 @@ class $ko_KR extends S {
   @override
   String get settings => "설정";
   @override
-  String get onlyForOctaves => "옥타브 전용";
-  @override
   String get issue => "새로운 문제 찾기";
   @override
-  String get showLabels => "라벨 표시";
+  String get app_title => "스마트 피아노";
   @override
-  String get appInfoAndCredits => "앱 정보 및 크레딧";
+  String get bug_report => "버그 리포트";
   @override
-  String get bugReport => "버그 리포트";
+  String get change_width => "너비 변경";
   @override
   String get about => "나에 대해서";
   @override
-  String get changeWidth => "너비 변경";
+  String get show_labels => "라벨 표시";
   @override
-  String get disabledScroll => "스크롤 사용 중지";
+  String get only_for_octaves => "옥타브 전용";
   @override
-  String get appTitle => "스마트 피아노";
+  String get disabled_scroll => "스크롤 사용 중지";
+  @override
+  String get app_info_and_credits => "앱 정보 및 크레딧";
 }
 
 class $en_US extends S {
@@ -193,23 +193,23 @@ class $en_US extends S {
   @override
   String get settings => "Settings";
   @override
-  String get onlyForOctaves => "Only For Octaves";
-  @override
   String get issue => "Find a new issue";
   @override
-  String get showLabels => "Show Labels";
+  String get app_title => "The Smart Piano";
   @override
-  String get appInfoAndCredits => "App Info And Credits";
+  String get bug_report => "Bug Report";
   @override
-  String get bugReport => "Bug Report";
+  String get change_width => "Change Width";
   @override
   String get about => "About Me";
   @override
-  String get changeWidth => "Change Width";
+  String get show_labels => "Show Labels";
   @override
-  String get disabledScroll => "Disable Scroll";
+  String get only_for_octaves => "Only For Octaves";
   @override
-  String get appTitle => "The Smart Piano";
+  String get disabled_scroll => "Disable Scroll";
+  @override
+  String get app_info_and_credits => "App Info And Credits";
 }
 
 class $en extends S {
@@ -227,23 +227,23 @@ class $zh_CN extends S {
   @override
   String get settings => "设置";
   @override
-  String get onlyForOctaves => "仅适用于八度音阶";
-  @override
   String get issue => "发现新问题";
   @override
-  String get showLabels => "显示标签";
+  String get app_title => "手机钢琴";
   @override
-  String get appInfoAndCredits => "应用信息";
+  String get bug_report => "Bug报告";
   @override
-  String get bugReport => "Bug报告";
+  String get change_width => "改变键宽度";
   @override
   String get about => "关于我";
   @override
-  String get changeWidth => "改变键宽度";
+  String get show_labels => "显示标签";
   @override
-  String get disabledScroll => "禁用滚动";
+  String get only_for_octaves => "仅适用于八度音阶";
   @override
-  String get appTitle => "手机钢琴";
+  String get disabled_scroll => "禁用滚动";
+  @override
+  String get app_info_and_credits => "应用信息";
 }
 
 class $fr_FR extends S {
@@ -257,24 +257,24 @@ class $fr_FR extends S {
   @override
   String get settings => "Réglages";
   @override
-  String get onlyForOctaves => "Seulement pour les octaves";
-  @override
   String get issue => "Trouver un nouveau numéro";
   @override
-  String get showLabels => "Afficher les étiquettes";
+  String get app_title => "Le piano intelligent";
   @override
-  String get appInfoAndCredits =>
-      "Informations sur les applications et crédits";
+  String get bug_report => "Rapport d'erreur";
   @override
-  String get bugReport => "Rapport d'erreur";
+  String get change_width => "Changer la largeur";
   @override
   String get about => "À propos de moi";
   @override
-  String get changeWidth => "Changer la largeur";
+  String get show_labels => "Afficher les étiquettes";
   @override
-  String get disabledScroll => "Désactiver le défilement";
+  String get only_for_octaves => "Seulement pour les octaves";
   @override
-  String get appTitle => "Le piano intelligent";
+  String get disabled_scroll => "Désactiver le défilement";
+  @override
+  String get app_info_and_credits =>
+      "Informations sur les applications et crédits";
 }
 
 class $ja_JP extends S {
@@ -288,23 +288,23 @@ class $ja_JP extends S {
   @override
   String get settings => "設定";
   @override
-  String get onlyForOctaves => "オクターブのみ";
-  @override
   String get issue => "新しい問題";
   @override
-  String get showLabels => "ラベルを表示";
+  String get app_title => "スマートピアノ";
   @override
-  String get appInfoAndCredits => "アプリ情報とクレジット";
+  String get bug_report => "バグレポート";
   @override
-  String get bugReport => "バグレポート";
+  String get change_width => "幅を変更";
   @override
   String get about => "私について";
   @override
-  String get changeWidth => "幅を変更";
+  String get show_labels => "ラベルを表示";
   @override
-  String get disabledScroll => "スクロールを無効にする";
+  String get only_for_octaves => "オクターブのみ";
   @override
-  String get appTitle => "スマートピアノ";
+  String get disabled_scroll => "スクロールを無効にする";
+  @override
+  String get app_info_and_credits => "アプリ情報とクレジット";
 }
 
 class $de_DE extends S {
@@ -318,23 +318,23 @@ class $de_DE extends S {
   @override
   String get settings => "die Einstellungen";
   @override
-  String get onlyForOctaves => "Nur für Oktaven";
-  @override
   String get issue => "Finden Sie eine neue Ausgabe";
   @override
-  String get showLabels => "Labels anzeigen";
+  String get app_title => "Das kluge Klavier";
   @override
-  String get appInfoAndCredits => "App-Infos und Credits";
+  String get bug_report => "Fehlerbericht";
   @override
-  String get bugReport => "Fehlerbericht";
+  String get change_width => "Breite ändern";
   @override
   String get about => "Über mich";
   @override
-  String get changeWidth => "Breite ändern";
+  String get show_labels => "Labels anzeigen";
   @override
-  String get disabledScroll => "Scroll deaktivieren";
+  String get only_for_octaves => "Nur für Oktaven";
   @override
-  String get appTitle => "Das kluge Klavier";
+  String get disabled_scroll => "Scroll deaktivieren";
+  @override
+  String get app_info_and_credits => "App-Infos und Credits";
 }
 
 class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {

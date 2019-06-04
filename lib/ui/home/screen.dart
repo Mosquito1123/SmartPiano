@@ -11,7 +11,8 @@ import '../WrapView/web_view_scene.dart';
 import '../../utils/index.dart';
 import '../common/piano_view.dart';
 import '../settings/screen.dart';
-import '../../generated/i18n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -90,14 +91,15 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           Container(height: 20.0),
           ListTile(
             leading: Icon(Icons.settings),
-            title: Text(S.of(context).settings),
+            title: Text(AppLocalizations.of(context).tr("settings")),
             onTap: () {
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => SettingsScreen()));
             },
           ),
           Divider(),
-          ListTile(title: Text(S.of(context).changeWidth)),
+          ListTile(
+              title: Text(AppLocalizations.of(context).tr("change_width"))),
           Slider(
               activeColor: Colors.redAccent,
               inactiveColor: Colors.white,
@@ -110,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               }),
           Divider(),
           ListTile(
-              title: Text(S.of(context).showLabels),
+              title: Text(AppLocalizations.of(context).tr("show_labels")),
               trailing: Switch(
                   value: _showLabels,
                   onChanged: (bool value) {
@@ -120,7 +122,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           Container(
             child: _showLabels
                 ? ListTile(
-                    title: Text(S.of(context).onlyForOctaves),
+                    title: Text(
+                        AppLocalizations.of(context).tr("only_for_octaves")),
                     trailing: Switch(
                         value: _labelsOnlyOctaves,
                         onChanged: (bool value) {
@@ -132,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
           Divider(),
           ListTile(
-              title: Text(S.of(context).disabledScroll),
+              title: Text(AppLocalizations.of(context).tr("disabled_scroll")),
               trailing: Switch(
                   value: _disableScroll,
                   onChanged: (bool value) {
@@ -143,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           Container(
             child: canVibrate
                 ? ListTile(
-                    title: Text(S.of(context).feedback),
+                    title: Text(AppLocalizations.of(context).tr("feedback")),
                     trailing: Switch(
                         value: shouldVibrate,
                         onChanged: (bool value) {
@@ -172,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                 }),
           ],
           title: Text(
-            S.of(context).appTitle,
+            AppLocalizations.of(context).tr("app_title"),
             style: TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 30.0,

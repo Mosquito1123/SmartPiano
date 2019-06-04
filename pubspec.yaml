@@ -10,15 +10,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  flutter_localizations:
+    sdk: flutter
   tonic: ^0.2.3
   cupertino_icons: ^0.1.2
   vibrate: ^0.0.4
   localstorage: ^2.0.0
   flutter_midi: ^1.0.0
   app_review: ^1.0.0
-  flutter_localizations:
-    sdk: flutter
+
   intl: ^0.15.7
   font_awesome_flutter: ^8.4.0
   persist_theme: ^1.0.3
@@ -31,6 +31,7 @@ dependencies:
   orientation: ^1.0.5
   device_info: ^0.4.0+2
   package_info: ^0.4.0+3
+  easy_localization: ^1.0.3+1
 
 
 dev_dependencies:
@@ -51,3 +52,16 @@ flutter:
 
   assets:
    - assets/sounds/Piano.sf2
+   - resources/lang/de_DE.json
+   - resources/lang/el_GR.json
+   - resources/lang/en.json
+   - resources/lang/en_GB.json
+   - resources/lang/en_US.json
+   - resources/lang/fr_FR.json
+   - resources/lang/ja_JP.json
+   - resources/lang/ko_KR.json
+   - resources/lang/ms_MY.json
+   - resources/lang/ru_RU.json
+   - resources/lang/zh_CN.json
+
+

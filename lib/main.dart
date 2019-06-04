@@ -17,11 +17,11 @@ import 'package:encrypt/encrypt.dart' as encrypt;
 import 'package:device_info/device_info.dart';
 import 'package:package_info/package_info.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import './generated/i18n.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 void main() {
   _setTargetPlatformForDesktop();
-  runApp(MyApp());
+  runApp(EasyLocalization(child: MyApp()));
 }
 
 class MyApp extends StatefulWidget {
@@ -30,8 +30,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale _locale = const Locale('en', '');
-
   // final ThemeModel _model = ThemeModel(customLightTheme: ThemeData.dark());
   // final LocalStorage _storage = new LocalStorage('app_settings');
   final iv = encrypt.IV.fromLength(16);
@@ -92,29 +90,37 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    var data = EasyLocalizationProvider.of(context).data;
+
     // return ScopedModel<ThemeModel>(
     //     model: _model,
     //     child: new ScopedModelDescendant<ThemeModel>(
     //         builder: (context, child, model) {
     return MaterialApp(
-      localizationsDelegates: const [
-        S.delegate,
+      localizationsDelegates: [
+        EasylocaLizationDelegate(
+            locale: data.locale ?? Locale('en', ''), path: 'resources/lang'),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate
       ],
-      supportedLocales: S.delegate.supportedLocales,
+      supportedLocales: [
+        Locale("ms", "MY"),
+        Locale("el", "GR"),
+        Locale("ru", "RU"),
+        Locale("en", "GB"),
+        Locale("ko", "KR"),
+        Locale("en", "US"),
+        Locale("en", ""),
+        Locale("zh", "CN"),
+        Locale("fr", "FR"),
+        Locale("ja", "JP"),
+        Locale("de", "DE"),
+      ],
       debugShowCheckedModeBanner: false,
-      title: S.of(context).appTitle,
+      title: "The Smart Piano",
       theme: ThemeData.light(),
-      home: Builder(
-        builder: (BuildContext context) {
-          return Localizations.override(
-            context: context,
-            locale: _locale,
-            child: MainScreen,
-          );
-        },
-      ),
+      home: MainScreen,
+      locale: data.locale,
     );
     // }));
   }
